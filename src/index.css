@@ -1,68 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Sunshiney&family=Bagel+Fat+One&family=Milonga&family=Darumadrop+One&family=Poppins:wght@400;600&display=swap');
+@import "tailwindcss";
+@source "./index.html" "./src/**/*.{js,ts,jsx,tsx}";
+/* remove normalize unless you install it: npm i -D normalize.css */
+
+/* Optional: only keep normalize if you really want it; Tailwind already has a reset */
+@import "normalize.css";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --color-primary: #9fae8f;
+    --color-secondary: #f4c4d0;
+    --color-accent: #e6b8c3;
+    --color-matcha: #a8b89e;
+    --color-cream: #fef9f3;
+    --color-pink: #f7d5df;
+    --color-sage: #b4c4a8;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+    /* Soft gradients */
+    --gradient-dreamy: linear-gradient(135deg, hsl(355 75% 85%) 0%, hsl(145 35% 80%) 50%, hsl(48 35% 90%) 100%);
+    --gradient-matcha: linear-gradient(180deg, hsl(150 35% 80%) 0%, hsl(145 35% 75%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(145 30% 88%) 0%, hsl(48 30% 92%) 100%);
+    --font-primary: 'Autour One', cursive;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: var(--font-primary);
+    background: #cfe8d7;
+    color: #444;
+    margin: 0;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bagel Fat One', cursive;
+    letter-spacing: 0.02em;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+    font-size: 2.75rem;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h3 {
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: #2f6b3c;
+    color: #ffffff;
+    padding: 0.65rem 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 150ms ease, background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+}
+
+.btn-cta:hover {
+    transform: scale(1.05);
+    background: #f28ba6;
+    color: #ffe680;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.btn-cta:focus-visible {
+    outline: 3px solid #ffe680;
+    outline-offset: 3px;
+}
+
+.dreamy-card {
+    background: var(--gradient-dreamy);
+    color: #2f2b25;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.dreamy-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.16);
+}
+
+.bg-card {
+    background-color: #fef9f3;
 }
