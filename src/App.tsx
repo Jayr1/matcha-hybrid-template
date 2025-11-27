@@ -2,11 +2,11 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { GalleryPage } from './pages/GalleryPage';
 import MusicPage from './pages/MusicPage';
-import { BlogPage } from './pages/BlogPage';
+import BlogPage from './pages/BlogPage';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { About } from './pages/About';
-import { Contact } from './pages/Contact';
+import Contact from './pages/Contact';
 
 
 function App() {

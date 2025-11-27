@@ -1,8 +1,8 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import { useState, useEffect } from "react";
-import { Music, Play, Pause, Volume2 } from 'lucide-react';
+import { Play, Pause, Volume2 } from 'lucide-react';
 import { Progress } from "@/components/ui/progress";
-import { SectionFrame, FloatingLeaf, Doodle } from '@/components/ui/DecorativeElements';
+import { SectionFrame, Doodle } from '@/components/ui/DecorativeElements';
 
 const MusicPage = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
